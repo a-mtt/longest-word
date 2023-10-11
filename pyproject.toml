@@ -12,6 +12,7 @@ pylint = "^3.0.1"
 requests = "^2.31.0"
 flask = "^3.0.0"
 flask-session = "^0.5.0"
+black = "^23.9.1"
 
 
 [build-system]
