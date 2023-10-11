@@ -1,8 +1,8 @@
 """
 A python implementation of the longest word game
-
 """
 import random
+import requests
 
 class Game:
     """
@@ -23,7 +23,9 @@ class Game:
             if letter not in test_grid:
                 return False
             test_grid.remove(letter)
-        return True
+        dict_url="https://wagon-dictionary.herokuapp.com/"
+        check_dict=requests.get(f"{dict_url}{word}").json()
+        return check_dict["found"]
 
 
 
