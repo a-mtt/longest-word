@@ -8,6 +8,7 @@ from flask_session import Session
 app = Flask(__name__)
 
 SESSION_TYPE = 'filesystem'
+SESSION_FILE_DIR = '/tmp'
 app.config.from_object(__name__)
 Session(app)
 
